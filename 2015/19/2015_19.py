@@ -61,8 +61,11 @@ possible_replacements = sort_replacements(possible_replacements)
 
 count1 = len(set(get_generatable_molecules(starting_molecule)))
 
+
 target_molecules = [starting_molecule]
 count2 = 0
+
+'''
 while 'e' not in target_molecules:
     starting_molecules = []
     for target_molecule in target_molecules:
@@ -71,7 +74,7 @@ while 'e' not in target_molecules:
     target_molecules = list(set(starting_molecules))
     print(count2,len(target_molecules))
 print(count2)
-
+'''
 
 '''
 target_molecule = starting_molecule
@@ -88,3 +91,10 @@ while True:
         starting_molecules = list(set(generateable_molecules))
 print(count2)
 '''
+
+try:
+    output = open('.\\2015\\19\\Output.txt','w')
+    output.write(f"{count1}\n{count2}")
+    output.close()
+except:
+    print("Could not write output file!")
