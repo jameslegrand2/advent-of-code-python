@@ -33,7 +33,7 @@ code = get_code(target)
 
 try:
     output = open('.\\2015\\25\\Output.txt','w')
-    output.write(f"{code}\n{'Incomplete'}")
+    output.write(f"{code}")
     output.close()
 except:
     print("Could not write output file!")
